@@ -8,14 +8,14 @@ export const CallbackHook = () => {
     const [counter, setCounter] = useState(10);
     //Memoriza FNs
     const incrementFather = useCallback(
-      () => {
+      (value) => {
         // console.log('SeCounter couner +1')
-        setCounter( (value) => value + 1 )
+        setCounter( (c) => c + value )
       },
       [],
     )
     useEffect(() => {
-        incrementFather()
+        // incrementFather()
     }, [incrementFather])
     
 
